@@ -36,7 +36,7 @@ import InputField from "@/common/components/InputField.vue"
 import TextAreaField from "@/common/components/TextAreaField.vue"
 import Button from "@/common/components/Button.vue"
 
-import { addComment } from "../movies.service.js"
+import { addComment } from "@/services/movies.js"
 
 export default {
   components: {

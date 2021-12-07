@@ -53,7 +53,7 @@ import { useRouter } from "vue-router"
 import InputField from "@/common/components/InputField.vue"
 import Button from "@/common/components/Button.vue"
 
-import { registerUser } from "../auth.service.js"
+import { registerUser } from "@/services/auth.js"
 
 export default {
   components: {

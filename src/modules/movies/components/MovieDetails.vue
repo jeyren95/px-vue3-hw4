@@ -34,6 +34,7 @@
         :rating="comment.rating"
         :content="comment.content"
         :id="comment._id"
+        :user="comment.userName"
         @comment-deleted="renderComments"
         />
       </div>
@@ -95,7 +96,7 @@ import Button from "@/common/components/Button.vue"
 import CommentForm from "./CommentForm.vue"
 import Comment from "./Comment.vue"
 
-import { fetchComments, fetchMovie } from "../movies.service.js" 
+import { fetchComments, fetchMovie } from "@/services/movies.js" 
 
 export default {
   components: {

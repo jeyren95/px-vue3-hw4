@@ -53,7 +53,7 @@ import { useStore } from "vuex"
 
 import Button from "@/common/components/Button.vue"
 
-import { getCurrentUser } from "@/modules/auth/auth.service.js"
+import { getCurrentUser } from "@/services/auth.js"
 
 export default {
   name: "App",

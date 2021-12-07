@@ -38,7 +38,7 @@ import { useStore } from "vuex"
 import InputField from "@/common/components/InputField.vue"
 import Button from "@/common/components/Button.vue"
 
-import { loginUser, getCurrentUser } from "../auth.service.js"
+import { loginUser, getCurrentUser } from "@/services/auth.js"
 
 export default {
   components: {

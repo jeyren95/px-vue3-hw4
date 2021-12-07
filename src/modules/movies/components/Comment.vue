@@ -4,7 +4,7 @@
       <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
         <div>
           <div class="text-sm leading-5 font-medium text-pink-600 truncate">
-            <span>{{ currentUser }}</span>
+            <span>{{ user }}</span>
           </div> 
           <div class="mt-2 flex">
             <StarIcon v-for="(number, index) in rating" :key="index" class="h-5 w-5 text-yellow-300" />
@@ -18,7 +18,10 @@
         </div>
       </div>
 
-      <div class="ml-5 flex-shrink-0 inline-flex items-center justify-center gap-2">
+      <div 
+      v-if="currentUser === user"
+      class="ml-5 flex-shrink-0 inline-flex items-center justify-center gap-2"
+      >
         <Button 
         type="button"
         class="border-transparent text-white bg-pink-600 hover:bg-pink-700 focus:ring-pink-500"
@@ -38,7 +41,7 @@ import { useStore } from "vuex"
 import Button from "@/common/components/Button.vue"
 import { TrashIcon, StarIcon } from "@heroicons/vue/solid"
 
-import { deleteComment } from "../movies.service.js"
+import { deleteComment } from "@/services/movies.js"
 
 export default {
   components: {
@@ -46,7 +49,7 @@ export default {
     TrashIcon,
     StarIcon
   },
-  props: ["rating", "content", "id"],
+  props: ["rating", "content", "id", "user"],
   setup(props, { emit }) {
     const store = useStore()
 

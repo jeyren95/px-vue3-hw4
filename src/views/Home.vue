@@ -26,7 +26,7 @@
 <script>
 import { ref, onMounted } from "vue"
 
-import { fetchMovies } from "@/modules/movies/movies.service.js"
+import { fetchMovies } from "@/services/movies.js"
 
 import Movie from "@/modules/movies/components/Movie.vue"
 

@@ -27,5 +27,3 @@ export const getCurrentUser = (accessToken) => fetch(`https://ecomm-service.hero
     }
   })
   .then((res) => res.json())
-
-
