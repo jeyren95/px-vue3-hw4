@@ -14,7 +14,7 @@ export const fetchMovie = (movieId) => fetch(`https://ecomm-service.herokuapp.co
   .then((res) => res.json())
 
 
-export const fetchMovies = () => fetch(`https://ecomm-service.herokuapp.com/movie?page=1&limit=6`, {
+export const fetchMovies = (page) => fetch(`https://ecomm-service.herokuapp.com/movie?page=${page}&limit=6`, {
     headers: {
       accept: "application/json"
     }

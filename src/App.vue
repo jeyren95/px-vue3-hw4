@@ -50,6 +50,7 @@
 <script>
 import { onMounted, computed } from "vue"
 import { useStore } from "vuex"
+import { useQueryProvider } from "vue-query"
 
 import Button from "@/common/components/Button.vue"
 
@@ -61,6 +62,7 @@ export default {
     Button
   },
   setup() {
+    useQueryProvider()
     const store = useStore()
 
     const logoutUser = () => {
